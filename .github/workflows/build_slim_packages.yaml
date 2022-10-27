@@ -29,7 +29,7 @@ jobs:
     container: emqx/build-env:${{ matrix.otp }}-${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: fix-git-unsafe-repository
       run: git config --global --add safe.directory /__w/emqx/emqx
     - uses: ./.github/actions/detect-profiles
